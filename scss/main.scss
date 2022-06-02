@@ -11,7 +11,7 @@ html {
 }
 .body {
     @include mi.flex-col-center(10em);
-    padding: 5em 2.5em 0em;
+    padding: 5em 2.5em;
     background-color: var.$light-gray;
     &-text {
         @include mi.flex-col-center(1.4em);
@@ -32,6 +32,7 @@ html {
         display: grid;
         gap: 3em;
         grid-template-rows: repeat(4, auto);
+        
         & > div {
             @include mi.flex-col-center(1.5em);
             text-align: center;
@@ -71,6 +72,19 @@ html {
             border-color: var.$blue;
         }
     }
+    &-footer p {
+        font-size: var.$step--5;
+        & a {
+            text-decoration: none;
+            font-size: var.$step--4;
+            color: var.$red;
+            transition: transform 500ms;
+            &:hover {
+                color: var.$blue;
+                transform: scale(1.1);
+            }
+        }
+    }
 }
 @media screen and (min-width: 450px){
     .body {
@@ -87,22 +101,25 @@ html {
 }
 @media screen and (min-width: 1000px){
  .body {
-    padding: 5em 10em 0em;
+    padding: 5em 10em;
  }
 }
 @media screen and (min-width: 1440px){
     .body {
-        padding: 10em 3em 0em;
+        padding: 10em 3em;
         &-text {
             width: 60%;
             gap: 1.7em;
         }
         &-cards {
-            grid-template-areas: 
-            "em b2 em1"
-            "b1 b2 b3"
-            "b1 b4 b3"
-            "em3 b4 em4";
+            // for same height first 1fr
+            // for same width: after "/" 1fr 1fr 1fr;
+            grid-template: 
+            ". b2 ." 1fr
+            "b1 b2 b3" 1fr
+            "b1 b4 b3" 1fr
+            ". b4 ." 1fr /
+            1fr 1fr 1fr;
             gap: 2em;
             &-supervisor {
                 grid-area: b1;

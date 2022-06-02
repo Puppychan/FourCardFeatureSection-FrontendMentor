@@ -14,7 +14,7 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 5em 2.5em 0em;
+  padding: 5em 2.5em;
   background-color: hsl(0deg, 0%, 98%);
 }
 .body-text {
@@ -103,6 +103,19 @@ html {
 .body-cards-calculator {
   border-color: hsl(212deg, 86%, 64%);
 }
+.body-footer p {
+  font-size: clamp(0.9rem, 0.81rem + 0.42vw, 1.33rem);
+}
+.body-footer p a {
+  text-decoration: none;
+  font-size: clamp(1.09rem, 0.95rem + 0.57vw, 1.66rem);
+  color: hsl(0deg, 78%, 62%);
+  transition: transform 500ms;
+}
+.body-footer p a:hover {
+  color: hsl(212deg, 86%, 64%);
+  transform: scale(1.1);
+}
 
 @media screen and (min-width: 450px) {
   .body-cards > div {
@@ -115,19 +128,19 @@ html {
 }
 @media screen and (min-width: 1000px) {
   .body {
-    padding: 5em 10em 0em;
+    padding: 5em 10em;
   }
 }
 @media screen and (min-width: 1440px) {
   .body {
-    padding: 10em 3em 0em;
+    padding: 10em 3em;
   }
   .body-text {
     width: 60%;
     gap: 1.7em;
   }
   .body-cards {
-    grid-template-areas: "em b2 em1" "b1 b2 b3" "b1 b4 b3" "em3 b4 em4";
+    grid-template: ". b2 ." 1fr "b1 b2 b3" 1fr "b1 b4 b3" 1fr ". b4 ." 1fr/1fr 1fr 1fr;
     gap: 2em;
   }
   .body-cards-supervisor {
