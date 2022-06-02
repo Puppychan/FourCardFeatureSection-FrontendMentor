@@ -1,0 +1,23 @@
+// color
+$red: hsl(0, 78%, 62%);
+$cyan: hsl(180, 62%, 55%);
+$orange: hsl(34, 97%, 64%);
+$blue: hsl(212, 86%, 64%);
+$dark-blue: hsl(234, 12%, 34%);
+$grayish-blue: hsl(229, 6%, 66%);
+$light-gray: hsl(0, 0%, 98%);
+
+
+// font-size
+$step--6: clamp(0.75rem, calc(0.68rem + 0.31vw), 1.07rem);
+$step--5: clamp(0.90rem, calc(0.81rem + 0.42vw), 1.33rem);
+$step--4: clamp(1.09rem, calc(0.95rem + 0.57vw), 1.66rem);
+$step--3: clamp(1.30rem, calc(1.12rem + 0.77vw), 2.08rem);
+$step--2: clamp(1.56rem, calc(1.32rem + 1.02vw), 2.60rem);
+$step--1: clamp(1.88rem, calc(1.56rem + 1.35vw), 3.25rem);
+$step-0: clamp(2.25rem, calc(1.83rem + 1.78vw), 4.06rem);
+$step-1: clamp(2.70rem, calc(2.15rem + 2.34vw), 5.08rem);
+$step-2: clamp(3.24rem, calc(2.52rem + 3.06vw), 6.35rem);
+$step-3: clamp(3.89rem, calc(2.95rem + 3.98vw), 7.93rem);
+$step-4: clamp(4.67rem, calc(3.45rem + 5.17vw), 9.92rem);
+$step-5: clamp(5.60rem, calc(4.03rem + 6.69vw), 12.40rem);

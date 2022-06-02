@@ -1,0 +1,31 @@
+// flex
+@mixin flex($gap: 0) {
+    display: flex;
+    gap: $gap;
+    flex-direction: row;
+}
+@mixin flex-col($gap: 0) {
+    display: flex;
+    gap: $gap;
+    flex-direction: column;
+}
+@mixin  flex-center($gap: 0) {
+    @include flex($gap);
+    justify-content: center;
+    align-items: center;
+}
+@mixin  flex-col-center($gap: 0) {
+    @include flex-col($gap);
+    justify-content: center;
+    align-items: center;
+}
+
+
+@mixin text-style($color, $size, $weight: 400, $line-height: 1.3) {
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line-height;
+    letter-spacing: 3px;
+    word-spacing: 2px;
+}
